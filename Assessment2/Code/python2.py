@@ -203,7 +203,13 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(input,  a):
-	return ""
+	middle = (len(input)//2)
+	steps=a//2
+	first_part = input[:middle-steps] 
+	last_past = input[middle+steps+1:]
+	result = first_part+last_past
+	return result
+
 
 	# <QUESTION 9>
 
@@ -220,7 +226,28 @@ def eight(input,  a):
 	# There are no hints for this question.
 
 def nine(string1, string2):
-    return False
+	if len(string1) <= len(string2):
+		shorter=string1
+		longer=string2
+	else:
+		shorter=string2
+		longer=string1
+	result = all(elem in shorter for elem in longer)
+	print(shorter)
+	print(longer)
+	return result
+"""
+	for i in range(len(longer)-len(shorter)+1):
+		for j in range(len(shorter)):
+			if longer[i + j] !=shorter[j]:
+				break
+			else:
+				return True
+	return False
+"""
+print(nine('tree', 'tiredest'))
+
+
 
 	# <QUESTION 10>
 
