@@ -154,7 +154,9 @@ def five():
 	# There are no hints for this question.
     
 def six(input):
-	return False
+	input = input.lower()
+	return(input[-2:] == "py")
+
 
 	# <QUESTION 7>
 
@@ -178,7 +180,12 @@ def six(input):
 	# Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-	return False
+	number_list=[a,b,c]
+	number_list.sort()
+	difference1=number_list[1] - number_list[0]
+	difference2=number_list[2] - number_list[1]
+	return(difference1 == difference2)
+
 
 	# <QUESTION 8>
 
