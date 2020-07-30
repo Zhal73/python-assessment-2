@@ -236,15 +236,7 @@ def nine(string1, string2):
 	print(shorter)
 	print(longer)
 	return result
-"""
-	for i in range(len(longer)-len(shorter)+1):
-		for j in range(len(shorter)):
-			if longer[i + j] !=shorter[j]:
-				break
-			else:
-				return True
-	return False
-"""
+
 print(nine('tree', 'tiredest'))
 
 
@@ -265,4 +257,12 @@ print(nine('tree', 'tiredest'))
 	# Think about nesting for loops.
 
 def ten(X,Y):
-	return []
+	result=[]
+	temp=[]
+	for i in range(Y):
+		for j in range(X):
+			temp.append(i*j)
+		result.append(temp)	
+	return result
+	
+print(ten(3,2))
